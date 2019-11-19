@@ -56,8 +56,31 @@ body {
   border-color: white;
   border-style: ridge;
 }
+
+.empty-blocks {
+  width: 130px;
+  height: 30px;
+  display: inline-block;
+  border-color: transparent;
+  border-style: ridge;
+}
+.piece-blocks {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  margin-left: 52px;
+}
+.piece-container {
+  width: 130px;
+  height: 30px;
+  display: inline-block;
+  border-color: transparent;
+  border-style: ridge;
+  position: relative;
+}
+
 .board {
-  width: 100px;
+  width: 130px;
   height: 20px;
   background-color: gray;
   margin-top: 20px;
