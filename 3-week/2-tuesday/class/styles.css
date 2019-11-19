@@ -1,0 +1,8 @@
+.product {
+  position: relative;
+}
+
+.deal {
+  position: absolute;
+  padding-top: 240px;
+}
