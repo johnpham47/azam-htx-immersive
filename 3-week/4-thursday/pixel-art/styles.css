@@ -1,0 +1,48 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(17, 40px);
+  grid-template-rows: repeat(26, 40px);
+}
+
+.black {
+  background-color: black;
+}
+
+.shine {
+  background-color: #e7e7c8;
+}
+.bright-hair {
+  background-color: #e3b043;
+}
+
+.dark-hair {
+  background-color: #986010;
+}
+
+.skin {
+  background-color: #fbd3ab;
+}
+
+.dark-skin {
+  background-color: #e5a25a;
+}
+
+.eyes {
+  background-color: #1c66d6;
+}
+
+.dark-clothes {
+  background-color: #224052;
+}
+
+.bright-clothes {
+  background-color: #706c83;
+}
+
+.light-clothes {
+  background-color: #c1b2ad;
+}
+
+.brown {
+  background-color: #9a3104;
+}
