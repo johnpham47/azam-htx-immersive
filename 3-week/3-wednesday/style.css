@@ -1,7 +1,4 @@
 @media (min-width: 320px) and (max-width: 480px) {
-  body {
-    background-color: yellow;
-  }
   #menu {
     display: flex;
     flex-direction: column;
@@ -21,7 +18,7 @@
 }
 @media (min-width: 1281px) {
   #ad {
-    height: 100px;
+    height: 200px;
     margin-bottom: 100px;
   }
 }
