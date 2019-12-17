@@ -4,14 +4,19 @@
 
 <body>
    <form method="POST" action="/trips"> 
-    <input type="text" name="title" placeholder="city"/>
+    <input type="text" name="name" placeholder="city"/>
     <input type="text" name="cost" placeholder="price"/>
-    <button> Save </button>
+    <button type="submit"> Save </button>
    </form> 
     
     {{#trips}} <!-- loop start -->
-        <h1>City: {{title}}</h1>
-        <h2>Price: ${{cost}}</b>
+        <ul>City: {{name}}
+        <li>Price: {{cost}}</li>
+        <li>Date of Departure: {{dateOfDeparture}} </li>
+        <li>Date of Return: TBD </li>
+        </ul>
+        
+        <br />
     {{/trips}} <!-- loop end -->
 
 </body>
