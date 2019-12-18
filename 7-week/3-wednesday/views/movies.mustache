@@ -18,8 +18,10 @@
                  <img src="{{posterURL}}" alt="Movie Poster" />
                  <br />
                  <label>Movie: {{title}} </label>
-                 <input type="hidden" name="trash" value="{{title}}"> 
-                 
+                 <br />
+                 <a href="/movies/{{title}}">Details</a>
+                 <input type="hidden" name="id" value="{{title}}" > 
+                 <br />
                  <button>Get this trash out of here</button>
                 </form>
             </li>
