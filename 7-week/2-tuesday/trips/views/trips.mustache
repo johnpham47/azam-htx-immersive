@@ -1,7 +1,7 @@
 <html>
 <head>
 </head>
-
+{{> menu}}
 <body>
    <form method="POST" action="/trips"> 
     <input type="text" name="name" placeholder="city"/>
@@ -10,12 +10,12 @@
    </form> 
     
     {{#trips}} <!-- loop start -->
-       <form method="POST" action="/delete-trip"> 
+       <form method="POST" action="/trips/delete-trip"> 
         <ul>City: {{name}}
         <li>Price: {{cost}}</li>
         <li>Date of Departure: {{dateOfDeparture}} </li>
         <li>Date of Return: TBD </li>
-        <input type="hidden" value="{{name}}" />
+        <input type="hidden" name="city" value="{{name}}" />
         <button>Get Outta Here</button>
         </ul>
         <br />

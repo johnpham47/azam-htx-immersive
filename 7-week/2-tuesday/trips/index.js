@@ -19,10 +19,10 @@ function authenticate(req, res, next) {
     if (req.session.isAuthenticated) {
       next();
     } else {
-      res.redirect("login");
+      res.redirect("/account/login");
     }
   } else {
-    res.redirect("login");
+    res.redirect("/account/login");
   }
 }
 app.use(
