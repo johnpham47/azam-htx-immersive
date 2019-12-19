@@ -10,13 +10,16 @@
    </form> 
     
     {{#trips}} <!-- loop start -->
+       <form method="POST" action="/delete-trip"> 
         <ul>City: {{name}}
         <li>Price: {{cost}}</li>
         <li>Date of Departure: {{dateOfDeparture}} </li>
         <li>Date of Return: TBD </li>
+        <input type="hidden" value="{{name}}" />
+        <button>Get Outta Here</button>
         </ul>
-        
         <br />
+       </form> 
     {{/trips}} <!-- loop end -->
 
 </body>
