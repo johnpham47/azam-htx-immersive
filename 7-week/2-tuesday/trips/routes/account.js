@@ -16,6 +16,7 @@ router.get("/logout", (req, res) => {
   }
   res.redirect("/account/login");
 });
+
 // POST
 router.post("/register", (req, res) => {
   let username = req.body.username;
@@ -33,14 +34,9 @@ router.post("/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
 
-  console.log(username);
-  console.log(users);
-
   let loggedInUser = users.find(user => {
     return user.username === username && user.password === password;
   });
-  console.log("Halp");
-  console.log(loggedInUser);
 
   if (loggedInUser) {
     if (req.session) {
