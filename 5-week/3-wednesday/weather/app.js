@@ -1,8 +1,12 @@
+let cityForm = document.querySelector("#cityForm");
 const api = "d87524730c3bc9d7dab385d4c6a13d4e";
 
+// Fetches the API data
 async function fetchWeather() {
+  event.preventDefault();
+  let cityName = document.querySelector("#cityName").value;
   let response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=houston,uk&appid=${api}&units=imperial`
+    `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api}&units=imperial`
   );
   let weatherDisplay = await response.json();
   console.log(weatherDisplay);
@@ -24,4 +28,15 @@ function displayWeather(i) {
   console.log(i.name);
 }
 
-fetchWeather();
+cityForm.addEventListener("click", fetchWeather);
+// function searchCity() {
+//   cityForm.addEventListener("click", () => {
+//     event.preventDefault();
+//     let cityName = document.querySelector("#cityName").value;
+//     fetchWeather(cityName);
+//   });
+//   let cityName = document.querySelector("#cityName").value;
+//   fetchWeather(cityName);
+//   event.preventDefault();
+// }
+// fetchWeather();

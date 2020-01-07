@@ -15,7 +15,6 @@ app.set("view engine", "mustache");
 var pgp = require("pg-promise")();
 var connectionString = "postgres://postgres:Iffritman56@localhost:5432/Example";
 var db = pgp(connectionString);
-// console.log(db);
 
 app.post("/posts", (req, res) => {
   const title = req.body.title;
@@ -46,6 +45,14 @@ app.post("/delete/:postID", async (req, res) => {
 app.get("/posts", async (req, res) => {
   const results = await db.any("SELECT post_id, title, body FROM posts;");
   res.render("index", { posts: results });
+});
+
+app.get("/register", (req, res) => {
+  res.render("register");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 
 // app.get("/posts", (req, res) => {

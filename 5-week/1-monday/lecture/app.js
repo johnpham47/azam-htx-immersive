@@ -22,8 +22,9 @@ request.onload = function() {
   let posts = JSON.parse(this.responseText);
   let postPhotos = posts.map(post => {
     return `<li>
-                <label>${post.title}<label>
-                <img src="${post.thumbnailUrl}">
+             <label>${post.title}<label>
+              <img src="${post.thumbnailUrl}">
+              <button onclick="clickMe()">Click Me!</button>
             </li>`;
   });
   postImg.innerHTML = postPhotos.join(" ");
@@ -31,3 +32,22 @@ request.onload = function() {
 
 request.open("GET", url);
 request.send();
+
+function clickMe() {
+  // console.log("Button Clicked");
+  let postButton = document.getElementById("button");
+  let buttonURL = "https://jsonplaceholder.typicode.com/comments";
+  let buttonRequest = new XMLHttpRequest();
+  buttonRequest.onload = function() {
+    // console.log(this.responseText);
+    let comments = JSON.parse(this.responseText);
+    let postComments = comments.map(comment => {
+      return `<div>
+              ${comment.id}
+              </div>`;
+    });
+    postButton.innerHTML = postComments.join(" ");
+  };
+  buttonRequest.open("GET", buttonURL);
+  buttonRequest.send();
+}

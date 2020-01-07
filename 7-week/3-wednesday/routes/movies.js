@@ -1,5 +1,15 @@
+//node --inspect-brk filename
+//chrome://inspect
 const express = require("express");
 const router = express.Router();
+
+// MIDDLEWARE
+function logDateTime(req, res, next) {
+  console.log(new Date());
+  next();
+}
+
+router.use(logDateTime);
 
 // POST
 router.post("/add-movie", (req, res) => {
@@ -36,7 +46,10 @@ router.get("/genre", (req, res) => {
 });
 
 router.get("/genre/:genre", (req, res) => {
-  res.render("genre");
+  let movieGenre = movies.filter(movie => movie.genre === req.params.genre);
+  console.log("Help me out here");
+  console.log(movieGenre);
+  res.render("genre", { movieGenre: movieGenre });
 });
 
 module.exports = router;

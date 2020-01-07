@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form id="submitOrder">
+      <label for="fname">Email</label>
+      <input
+        type="text"
+        id="email"
+        name="firstname"
+        placeholder="Enter your email"
+      />
+
+      <label for="lname">Coffee</label>
+      <input
+        type="text"
+        id="coffee"
+        name="lastname"
+        placeholder="Enter your order"
+      />
+
+      <button>Submit</button>
+    </form>
+
+    <form id="findOrder">
+      <label for="order">Find Your Order</label>
+      <input
+        type="text"
+        id="order"
+        name="order"
+        placeholder="Enter your email here"
+      />
+      <button onclick="getButton()">Find Your Order</button>
+    </form>
+    >
+
+    <ul id="searchedOrder"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>

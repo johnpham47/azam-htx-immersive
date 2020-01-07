@@ -4,4 +4,5 @@ const pi = 3.142;
 
 function greet() {
   console.log("Hello");
+  i;
 }

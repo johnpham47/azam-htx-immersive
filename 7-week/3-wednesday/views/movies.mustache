@@ -11,6 +11,8 @@
         <button>Save</button>
      </form>
 
+    <h1>Movies:</h1>
+
     {{#movies}}
         <ul>
             <li>
@@ -26,6 +28,9 @@
                 </form>
             </li>
         </ul>
+    {{/movies}}
+    {{^movies}}
+        No movies here
     {{/movies}}
 
 </body>

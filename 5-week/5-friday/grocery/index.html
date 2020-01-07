@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grocery</title>
+  </head>
+  <body>
+    <h1>Grocery List</h1>
+    <input type="text" id="shoppingListTextBox" />
+    <button onclick="saveShoppingListButtonClick()" id="saveShoppingListButton">
+      Save
+    </button>
+    <ul id="shoppingListUL"></ul>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBxpurLNZGiaG-q-3g9z8vGPPSMGZVkSXY",
+        authDomain: "groceryfr-1743c.firebaseapp.com",
+        databaseURL: "https://groceryfr-1743c.firebaseio.com",
+        projectId: "groceryfr-1743c",
+        storageBucket: "groceryfr-1743c.appspot.com",
+        messagingSenderId: "248674701678",
+        appId: "1:248674701678:web:04d28971b06269994e317f"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
