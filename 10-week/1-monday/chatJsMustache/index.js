@@ -5,6 +5,7 @@ const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 const path = require('path')
 
+
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
@@ -21,6 +22,10 @@ app.get('/', function (req, res) {
 io.on('connection', function (socket) {
     socket.on('chat message', function (msg) {
         io.emit('chat message', msg)
+    })
+    socket.on('connectUser', function (username) {
+        socket.username = username[3];
+        io.emit('chat message', `${socket.username} has connected!`)
     })
 
 })
