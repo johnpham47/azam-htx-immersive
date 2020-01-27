@@ -5,7 +5,7 @@ import BodyHeadline from './BodyHeadline'
 export class Headline extends Component {
     render() {
         return (
-            <div>
+            <div className="headline">
                 <HeaderHeadline />
                 <BodyHeadline />
             </div>

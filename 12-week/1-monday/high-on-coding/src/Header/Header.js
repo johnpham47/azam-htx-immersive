@@ -7,8 +7,7 @@ export class Header extends Component {
         return (
           <div className="header">
             <Logo />
-            <div className="menu-items">
-                <Menu />
+            <div>
                 <Menu />
             </div>
           </div>

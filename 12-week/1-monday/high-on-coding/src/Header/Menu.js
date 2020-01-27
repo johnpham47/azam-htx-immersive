@@ -3,9 +3,10 @@ import React, { Component } from 'react'
 export class Menu extends Component {
     render() {
         return (
-            <div>
-                Menu Items
-            </div>
+            <ul className="menu-items">
+                <li>Home</li>
+                <li>Category</li>
+            </ul>
         )
     }
 }
