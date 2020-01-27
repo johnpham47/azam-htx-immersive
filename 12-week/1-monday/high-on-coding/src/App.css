@@ -1,0 +1,30 @@
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+
+.body {
+  flex: 3;
+display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} 
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  flex: 1
+
+}
+ .logo {
+  display: flex;
+  justify-content: start;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-evenly;
+} 
